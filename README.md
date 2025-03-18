@@ -21,7 +21,12 @@ Este proyecto utiliza MySQL.
 ## Configuración redirecciones en PHP
 En `dashboard/mod/index.php`:
 ```php
-Location: /EL_NOMBRE_DE_TU_CARPETA_ROOT/dashboard/
+    echo "El post ha sido eliminado con éxito.";
+    header("Location: /EL_NOMBRE_DE_TU_CARPETA_ROOT/dashboard/");
+    exit;
+} else {
+    die("No se ha especificado un ID de publicación válido.");
+}
 ```
 
 En `dashboard/pin/pin.php`:
