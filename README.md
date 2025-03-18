@@ -18,6 +18,20 @@ $port = 3306;
 Aquí has de poner el servername, el username, nombre de la database y password que configurarás en tu database por defecto.
 Este proyecto utiliza MySQL.
 
+## Configuración redirecciones en PHP
+En `dashboard/mod/index.php`:
+```php
+Location: /EL_NOMBRE_DE_TU_CARPETA_ROOT/dashboard/
+```
+
+En `dashboard/pin/pin.php`:
+```
+<img src="<?php echo $baseURL; ?>../EL_NOMBRE_DE_TU_CARPETA_ROOT/dashboard/uploads/<?php echo htmlspecialchars(basename($imagePath)); ?>" alt="Imagen">
+            <br>
+            <a href="<?php echo $baseURL; ?>../EL_NOMBRE_DE_TU_CARPETA_ROOT/dashboard/uploads/<?php echo htmlspecialchars(basename($imagePath)); ?>" download>Descargar imagen</a>
+```
+
+Son las únicas líneas que han de ser modificadas. El nombre de tu carpeta ROOT ha de ser el nombre que le pones.
 ## Licencia
 
 [AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)
