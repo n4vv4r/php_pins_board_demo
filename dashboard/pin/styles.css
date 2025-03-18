@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('Coolvetica\ Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Coolvetica', sans-serif;
+    background-color: #000000; 
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.image-section {
+    flex: 1;
+    max-width: 55%;
+}
+
+.image-section h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.image-section a {
+    color: #cf1df2; 
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.image-section a:hover {
+    color: #9515af; 
+    text-decoration: underline;
+}
+
+.image-section p {
+    color: #71767b; 
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #1a1a1a; 
+}
+
+.comments-section {
+    flex: 1;
+    max-width: 40%;
+    background: #000000; 
+    padding: 15px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a1a1a; 
+}
+
+.comments-section h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.comments {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 300px;
+    padding-right: 10px;
+}
+
+.comment {
+    border-bottom: 1px solid #1a1a1a; 
+    padding: 8px 0;
+    color: #ffffff;
+}
+
+.comment b {
+    color: #f21de0; 
+    font-weight: 600;
+}
+
+.comment small {
+    color: #71767b; 
+    font-size: 12px;
+}
+
+textarea {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+    resize: none;
+    background-color: #1a1a1a; 
+    border: 1px solid #333333;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+}
+
+textarea::placeholder {
+    color: #71767b; 
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #f21dbd; 
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e04af4; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .image-section,
+    .comments-section {
+        max-width: 100%;
+    }
+
+    .image-section img {
+        max-height: 300px;
+    }
+}

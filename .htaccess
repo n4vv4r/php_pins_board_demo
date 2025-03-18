@@ -1,0 +1,26 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^pin/([0-9]+)$ dashboard/pin/pin.php?id=$1 [L,QSA]
+
+
+# Regla para /pin/[id]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^pin/([0-9]+)$ dashboard/pin/pin.php?id=$1 [L,QSA]
+
+# Regla para /dashboard/hashtag/[nombre] -> /dashboard/hashtag/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^dashboard/hashtag/(.+)$ dashboard/hashtag/index.php?hashtag=$1 [L,QSA]
+
+# Regla para /dashboard/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^dashboard/?$ dashboard/index.php [L]
+
+# Regla genérica para la raíz 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

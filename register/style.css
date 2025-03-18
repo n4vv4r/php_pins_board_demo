@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('Coolvetica\ Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Coolvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 90vh;
+    max-width: 1200px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width: 80%;
+    max-width: 400px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #080808;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bebebe;
+}
+
+.error {
+    color: rgb(192, 7, 7);
+    margin-bottom: 15px;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #cf1df2;
+    text-decoration: none;
+}
