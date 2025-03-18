@@ -1,5 +1,5 @@
 
-# PHPINS (demo)
+# PHPINS (DEMO)
 
 Es un proyecto en PHP puro y duro, sin ningún framework. Esto fue un proyecto que hice cuando me aburría. Quise recrear un Pinterest con una temática más oscura, (como X). Podrías llamarle un "clon de pinterest".
 
